@@ -41,18 +41,18 @@ class App extends Component {
 
     return (
       <div className="App">
-        <button onClick={this.toggleShow}>
+        <button onClick={this.toggleShow} style={{margin:"25px", backgroundColor: "#f1f1f1", color: "black", fontSize: "16px", padding: "16px 30px", border: "none",cursor: "pointer", borderRadius: "5px", textAlign: "center"}}>
           {show ? 'Hide Profile' : 'Show Profile'}
         </button>
         {show && (
-          <div>
+          <div style={{width:"33%", margin:"50px", backgroundColor:"beige"}}>
             <img src={imgSrc} alt={fullName} style={{width:"200px", height:"150px"}}/>
             <h1>{fullName}</h1>
             <p>Profession: {profession}</p>
             <p>{bio}</p>
           </div>
         )}
-        <p>Time since mount: {this.calculateTimeSinceMount()} seconds</p>
+        <p>Time since mount: <span style={{fontSize:"large"}}>{this.calculateTimeSinceMount()}</span> seconds</p>
       </div>
     );
   }
